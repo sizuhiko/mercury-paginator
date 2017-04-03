@@ -198,7 +198,7 @@ Example:
 
         <ul id="paginationlist" class="pagination">
             <template is="dom-if" if="{{showFirst}}">
-                <li><a on-tap="firstPage">First</a></li>
+                <li><a on-tap="firstPage">[[first]]</a></li>
             </template>
 
                 <li class$='{{disablePrev}}'>
@@ -216,7 +216,7 @@ Example:
             </li>
 
             <template is="dom-if" if="{{showLast}}">
-                <li><a on-tap="lastPage">Last</a></li>
+                <li><a on-tap="lastPage">[[last]]</a></li>
             </template>
 
             <content></content>
@@ -340,6 +340,29 @@ Example:
         next: {
             type: String,
             value: '>'
+        },
+
+        /**
+         * The `first` attribute specifies the label
+         * for the First button
+         *
+         * @attribute first
+         * @type string
+         */
+        first: {
+          type: String,
+          value: 'First'
+        },
+        /**
+         * The `last` attribute specifies the label
+         * for the Last button
+         *
+         * @attribute last
+         * @type string
+         */
+        last: {
+          type: String,
+          value: 'Last'
         },
 
         showFirst:{
